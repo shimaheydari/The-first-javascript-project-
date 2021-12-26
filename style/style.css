@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir-Light.eot'), url('../fonts/Vazir-Light.woff2') format('woff2'), url('../fonts/Vazir-Light.woff') format('woff'), url('../fonts/Vazir-Light.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'vazir';
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #141527;
+}
+
+.action {
+    top: 25%;
+    position: fixed;
+    right: 50%;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+
+.action .profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.action .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.action .menu {
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    transform: translateY(80px);
+    -webkit-transform: translateY(80px);
+    -moz-transform: translateY(80px);
+    -ms-transform: translateY(80px);
+    -o-transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s e;
+    -moz-transition: all 0.5s e;
+    -ms-transition: all 0.5s e;
+    -o-transition: all 0.5s e;
+    right: 6px;
+}
+
+.action .menu.active {
+    opacity: 1;
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+}
+
+.action .menu::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    background-color: white;
+    top: -10px;
+    right: 39px;
+}
+
+.action .menu h3 {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 9px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.action .menu h3:hover {
+    scale: 1.1;
+}
+
+.action .menu h3 span {
+    color: #141527a3;
+}
+
+.action .menu ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.action .menu ul li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.action .menu ul li:hover img {
+    opacity: 1;
+}
+
+.action .menu ul li:hover a {
+    color: #51597e;
+}
+
+.action .menu ul li img {
+    width: 30px;
+    height: 30px;
+    margin-left: 12px;
+    opacity: 0.5;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.action .menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
